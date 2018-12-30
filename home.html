@@ -1,0 +1,143 @@
+<html>
+<head>
+	<title>Dj Behera</title>
+	<!--{% load staticfiles %}-->
+	<style>
+		* {
+			box-sizing: border-box;
+			}
+		img {
+			border-radius: 50%;
+			border: solid grey;
+			}
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: outset;
+			cursor: pointer;
+			width: 100%;
+			opacity: 0.9;
+			}
+
+			.btn:hover {
+			opacity: 1;
+			}
+		.container_intro{
+			width: 98%;
+			position: absolute;
+			top: 50%;
+			text-align: center;
+			}
+		.container_desc{
+			position: absolute;
+			top: 62%;
+			width: 98%;
+			text-align: center;			}
+		.container_image{
+			position: absolute;
+			top: 50%;
+			left: 53%;
+			margin: -150px 0 0 -135px;
+			max-width: 400px;
+			letter-spacing: 1px;
+			}	
+		.container_footer{
+			position: absolute;
+			top: 90%;
+			width: 98%;
+			text-align: center;	
+			}
+			input[type=text]{
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0 10px 0;
+			border: none;
+			background: #f1f1f1;
+			}
+
+			input[type=text]:focus{
+			outline: none;
+			}
+			
+			.cover{
+			background-color:powderblue;
+			background-position: center;
+			background-image: url("base.jpg");
+			letter-spacing: 3px;
+			
+			}
+
+			.topnav {
+			  overflow: hidden;
+			  border:red;
+			}
+
+			.topnav > .dropdown{
+			  width: 100px;
+			  float: right;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 0px;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+			.topnav a:hover {
+			  background-color: #ddd;
+			  color: black;
+			}
+			
+			.dropdown > a{
+				display:inline-block;
+				text-decoration: none;
+				color: #f2f2f2;
+				padding: 14px 16px;
+			}
+			.dropdown2{
+				display:none;
+				width: 100px;
+			}
+			.dropdown2 a{
+				display: inline-block;
+				padding: 14px 1px;
+				text-align: center;
+				text-decoration: none;
+				color: #f2f2f2;
+			}
+			
+			#hvr:hover .dropdown2{
+				display:inline-block;
+			}
+
+	</style>
+</head>
+<body class="cover">
+
+<div  class="topnav">
+  <div class="dropdown"><a href="{% url 'home' %}">Home</a></div>
+  <div class="dropdown"><a href="{% url 'allblogs' %}">Resume</a></div>
+  <div class="dropdown"><a href="{% url 'allblogs' %}">Kaggle</a></div>
+  <div class="dropdown" id="hvr" >
+	  <a href="#" >Projects</a>
+	  <div class="dropdown2">
+		<a href="{% url 'catsndogs' %}">catsNdogs</a>
+		<a href="{% url 'excel' %}">Consolify!</a>
+	  </div>
+  </div>
+</div>
+
+<div class="container_image">
+	<img src="dj.jpg" width=140 height=180/>
+</div>
+<div class="container_intro">
+	<h1 style="font-size:50px;"><b><font color="white">Hi, I am Dj Behera</font></b></h1>
+</div> 
+<div class="container_desc">
+	<h2><i><font color="white">Welcome to my personal blog</font></i></h2>
+</div> 
+<div class="container_footer">
+	<p><font color="white">Dj © 2018. All Right Reserved</font></p>
+</div>
+
+</body>
+</html>
